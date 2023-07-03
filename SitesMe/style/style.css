@@ -1,0 +1,845 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&family=Source+Sans+Pro:wght@200&family=Work+Sans:wght@200&display=swap");
+
+* {
+  font-family: "Outfit", sans-serif;
+  align-items: center;
+}
+body {
+  background-color: rgb(255, 255, 255);
+}
+.header {
+  box-shadow: 1px 1px 4px 0 rgba(255, 255, 255, 0.1);
+  position: fixed;
+  width: 99%;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border-radius: 10px;
+}
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+li a {
+  color: #8843f2;
+}
+
+body.dark-mode a {
+  color: rgb(111, 0, 255);
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+
+  text-decoration: none;
+}
+.dark {
+  margin: 20px 15px 15px 15px;
+}
+.Enbtn {
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.ENGLISH {
+  display: none;
+}
+BODY.EN .farsi {
+  display: none;
+}
+BODY.EN .ENGLISH {
+  display: inline-block;
+}
+
+#ENGLISH {
+  display: none;
+}
+BODY.EN #farsi {
+  display: none;
+}
+BODY.EN #ENGLISH {
+  display: block;
+}
+body.en .logo {
+  float: left;
+}
+body.en .menu {
+  float: left;
+}
+body.en .dark {
+  float: right;
+}
+body.en .Enbtn {
+  float: right;
+  margin-top: 30px;
+}
+
+.section {
+  border-radius: 9px;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+  border-radius: 20px;
+}
+
+.header .logo {
+  display: block;
+  float: right;
+  font-size: 28px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #000000;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+#dark {
+  background: url("https://imgurl.ir/uploads/i72743_moon_2.png");
+  border: none;
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  margin-top: 18px;
+}
+#home {
+  padding-top: 100px;
+}
+
+#h3heder {
+  padding: 0px 20px;
+}
+
+.section {
+  height: 700px;
+  width: 100%;
+  align-items: center;
+}
+#ABOUTME,
+#myportfolio,
+#aboutme {
+  background-color: #eef2ff;
+}
+#HOME,
+#myskills,
+#contactwithme {
+  background-color: #fffdf9;
+}
+#img {
+  align-items: center;
+}
+#imghome {
+  height: 100%;
+  width: 50%;
+  background-repeat: no-repeat;
+  padding-left: 25%;
+}
+#myportfolio {
+  height: 262%;
+}
+
+.h2section {
+  text-align: center;
+  padding-top: 50px;
+  color: #7900ff;
+}
+H4 {
+  color: #7900ff;
+}
+#divaboutme {
+  margin: 0px 37%;
+  text-align: center;
+  font-size: 20px;
+}
+#grid {
+  font-size: 18px;
+  text-align: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: space-evenly;
+}
+
+/* کد مهارت ها */
+
+.skill-bars {
+  padding: 50px 16%;
+  width: 1000px;
+}
+.skill-bars .bar {
+  margin: 40px 0;
+}
+.skill-bars .bar:first-child {
+  margin-top: 0px;
+}
+.skill-bars .bar .info {
+  margin-bottom: 10px;
+}
+.skill-bars .bar .info span {
+  font-weight: 500;
+  font-size: 20px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line {
+  height: 15px;
+  width: 100%;
+  background: #e1e4f3;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+    0 1px rgba(221, 213, 213, 0.8);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #7900ff;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+.bar .progress-line.html span {
+  width: 100%;
+}
+.bar .progress-line.css span {
+  width: 100%;
+}
+.bar .progress-line.Bootstrap span {
+  width: 100%;
+}
+.bar .progress-line.JavaScript span {
+  width: 25%;
+}
+.bar .progress-line.React span {
+  width: 0%;
+}
+
+.progress-line span::after {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 10px;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+.progress-line.html span::after {
+  content: "100%";
+}
+.progress-line.css span::after {
+  content: "100%";
+}
+.progress-line.Bootstrap span::after {
+  content: "100%";
+}
+.progress-line.JavaScript span::after {
+  content: "25%";
+}
+/*
+.progress-line.React span::after{
+  content: "0%";
+}
+*/
+#sapnReact {
+  font-size: 15px;
+}
+
+/*اتمام کد مهارت ها */
+
+/* نمونه کار */
+.myportfolio {
+  padding-top: 60px;
+}
+
+figure.snip1321 {
+  font-family: "Raleway", Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 0px 0px 20px 23%;
+  min-width: 55%;
+  max-width: 55%;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+}
+figure.snip1321 * {
+  -webkit-box-sizing: padding-box;
+  box-sizing: padding-box;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+figure.snip1321 img {
+  max-width: 100%;
+  vertical-align: top;
+}
+figure.snip1321 figcaption {
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+}
+figure.snip1321 h2,
+figure.snip1321 h4 {
+  margin: 0;
+}
+figure.snip1321 h2 {
+  font-weight: 600;
+}
+figure.snip1321 h4 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+figure.snip1321 i {
+  font-size: 32px;
+}
+figure.snip1321:after {
+  background-color: #ffffff;
+  position: absolute;
+  content: "";
+  display: block;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  opacity: 0;
+}
+figure.snip1321 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+figure.snip1321:hover figcaption,
+figure.snip1321.hover figcaption {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+figure.snip1321:hover:after,
+figure.snip1321.hover:after {
+  -webkit-transform: rotateX(0);
+  transform: rotateX(0);
+  opacity: 0.9;
+}
+p.abotkar {
+  text-align: center;
+  padding-top: 40px;
+}
+
+/*اتمام کد نمونه کار */
+/* کد ارتباط با من  */
+#img2 {
+  height: 100%;
+  width: 50%;
+  position: relative;
+  top: -100px;
+  background-repeat: no-repeat;
+}
+
+#contactwithme {
+  background-repeat: no-repeat;
+}
+form {
+  align-items: center;
+  margin-top: 5%;
+}
+#divform {
+  margin: 100px;
+  width: 500px;
+  height: 400px;
+  float: right;
+  text-align: center;
+
+  background: rgba(245, 245, 245, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 10px;
+}
+input {
+  margin: 10px;
+  text-align: center;
+  border-radius: 10px;
+  border: 6px rgb(255, 255, 255) solid;
+}
+textarea {
+  align-items: center;
+  text-align: center;
+  height: 48px;
+  width: 280px;
+  border-radius: 7px;
+  border: 6px rgb(255, 255, 255) solid;
+}
+button.submit {
+  margin: 25px 0px 0px 0px;
+  width: 95px;
+  height: 30px;
+  background: rgba(5, 5, 5, 0.1);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 2px;
+}
+button.submit:hover {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+}
+
+.wrapper {
+  display: inline-flex;
+  margin-top: 8px;
+}
+
+.wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 10px;
+  height: 10px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14\px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover a,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #0571ff;
+  color: #ffffff;
+}
+.alink {
+  color: #000000;
+}
+/*اتمام کد ارتباط با من  */
+
+/*ريسژانسيو  */
+@media (min-width: 320px) and (max-width: 780px) {
+  #imghome {
+    width: 100%;
+  height: 100%;
+  padding: 0px;
+  }
+
+  .header li a {
+    text-align: center;
+  }
+  .Enbtn {
+    position: relative;
+    top: -10px;
+  }
+
+  .hambergrmeun {
+    visibility: block;
+  }
+
+  .navbar {
+    display: none;
+  }
+  #divaboutme p {
+    font-size: 15px;
+  }
+  #home {
+    height: 200px;
+  }
+  #ABOUTME {
+    height: 1090px;
+  }
+  #myskills {
+    height: 750px;
+  }
+  #myportfolio {
+    height: 1450px;
+  }
+  .flex {
+    margin-top: 25px;
+  }
+  #divaboutme {
+    margin: 0px 18%;
+    text-align: center;
+    font-size: 18px;
+  }
+  #grid {
+    grid-template-columns: repeat(1, 300px);
+    margin-bottom: 15px;
+  }
+
+  .abotkar {
+    font-size: 18px;
+  }
+
+  #contactwithme {
+    height: 0px;
+  }
+  #img2 {
+    display: hidden;
+  }
+
+  #divform {
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin-right: 18px;
+    width: 90%;
+  }
+  #text {
+    height: 50px;
+    width: 90%;
+  }
+  button.submit {
+    background-color: #fff;
+  }
+  .wrapper {
+    padding-top: 20px;
+  }
+
+  .wrapper .icon {
+    position: relative;
+
+    padding: 10px;
+  }
+  .header .logo {
+    font-size: 20px;
+  }
+  .skill-bars {
+    padding: 50px 16%;
+    width: 260px;
+  }
+
+  figure.snip1321 {
+    min-width: 90%;
+    max-width: 80%;
+    margin: 0px 0px 0px 6%;
+  }
+}
+
+/*دارك مود   */
+body.EN .header .menu-icon {
+  position: relative;
+  top: -50px;
+  right: 25px;
+}
+
+body.dark-mode #divform {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(212, 212, 212, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+body.dark-mode .logo {
+  color: #f0fff3;
+}
+body.dark-mode #ABOUTME {
+  background-color: #191919;
+}
+
+body.dark-mode #myportfolio {
+  background-color: #191919;
+}
+body.dark-mode #myskills {
+  background-color: rgb(32, 32, 32);
+}
+
+body.dark-mode #home {
+  background-color: #000000;
+}
+body.dark-mode h2 {
+  color: #ffc107;
+}
+body.dark-mode i {
+  color: #000000;
+}
+body.dark-mode #grid i {
+  color: #dfdfdf;
+}
+body.dark-mode h4 {
+  color: #ffc107;
+}
+body.dark-mode DIV LI {
+  color: #f0fff3;
+}
+body.dark-mode p {
+  color: #f0fff3;
+}
+
+body.dark-mode #aboutme {
+  background-color: #414141;
+}
+body.dark-mode #myportfolio {
+  background-color: #414141;
+}
+body.dark-mode #ABOUTME {
+  background-color: #414141;
+}
+
+body.dark-mode #myskills {
+  background-color: #525252;
+}
+body.dark-mode #HOME {
+  background-color: #525252;
+}
+body.dark-mode #contactwithme {
+  background-color: #525252;
+}
+body.dark-mode {
+  background-color: #313131;
+}
+body.dark-mode li a {
+  color: #ffc107;
+}
+
+body.dark-mode .header {
+  box-shadow: 0 8px 32px 0 rgba(61, 52, 52, 0.37);
+}
+body.dark-mode .flex {
+  color: #f9c5d5;
+}
+body.dark-mode .percentage {
+  fill: rgb(255, 255, 255);
+}
+body.dark-mode button.submit {
+  background-color: #eee;
+  color: black;
+}
+body.dark-mode #dark {
+  background-image: url("https://imgurl.ir/uploads/l63210_sun_4.png");
+}
+body.dark-mode .enbtn {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+body.dark-mode figure.snip1321:after {
+  background-color: #313131;
+}
+body.dark-mode .bar .progress-line span {
+  background: #ffbd35;
+}
+body.dark-mode .skill-bars .bar .info span {
+  color: rgb(255, 255, 255);
+}
